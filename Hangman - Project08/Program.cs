@@ -24,9 +24,6 @@ namespace Hangman___Project08
 
    public enum hangmanWords { Bacon, Cheese, Ketchup, Lettuce, Mustard, Pickles, Tomato };
 
-
-
-
    class Program
    {
       static void Main(string[] args)
