@@ -38,19 +38,6 @@ namespace Hangman___Project08
            "orange"
          };
 
-         /*
-                  string[] listwords = new string[10];
-                  listwords[0] = "sheep";
-                  listwords[1] = "goat";
-                  listwords[2] = "computer";
-                  listwords[3] = "america";
-                  listwords[4] = "watermelon";
-                  listwords[5] = "icecream";
-                  listwords[6] = "jasmine";
-                  listwords[7] = "pineapple";
-                  listwords[8] = "orange";
-                  listwords[9] = "mango"; */
-
          Random randGen = new Random();
          var idx = randGen.Next(0, hangmanWords.Count);
          string mysteryWord = hangmanWords.ElementAt(idx);
@@ -63,20 +50,23 @@ namespace Hangman___Project08
          while (true)
          {
             char playerGuess = char.Parse(Console.ReadLine());
+            int i = 1;
             for (int j = 0; j < mysteryWord.Length; j++)
             {
                if (playerGuess == mysteryWord[j])
                   guess[j] = playerGuess;
-
+               // else if (playerGuess != mysteryWord[i])
+                  // Console.WriteLine("Incorrect");
+                  // guess[j] = "incorrect";
             }
-            if (playerGuess != mysteryWord)
-               Console.WriteLine("Incorrect");
+
+            //if (playerGuess != mysteryWord[i])
+
+
             Console.WriteLine(guess);
 
 
          }
-
-
       }
    }
 }
